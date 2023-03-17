@@ -11,3 +11,5 @@ Thanks for your interest on the role. Your performance on the interviews so far 
 Please remember to use the page designs that we provided, and feel free to implement any other functionality that you deem important.
 
 2. What is the output of the code in the image below? Why setTimeout isn’t working? Change the code to print each value after the specified setTimeout interval (e.g. 1000ms).
+
+![JS sync async context](js_sync_async_test.png)
