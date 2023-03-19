@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@500;600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-logo {
+  color: #fff;
+  font-family: 'Montserrat', serif;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.navbar-end {
+  display: flex;
+  align-items: center;
+}
+.navbar-end ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0px;
+  padding-right: 1rem;
+}
+.navbar-end ul li {
+  color: #fff;
+  font-size: 0.8rem;
+}
+.navbar-end ul li a {
+  text-decoration: none;
+  padding: 0.3rem;
+  color: #fff;
+  font-family: 'Montserrat', serif;
+}
+main {
+  height: 95vh;
+}
+.container-fluid,
+.row,
+.bg-lightgray {
+  height: 100%;
+}
+.bg-lightgray {
+  background-color: #d8d8d8;
+  height: 100%;
+}
+#book-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#book-isbn {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+}
+.img-fluid {
+  box-shadow: 1px 3px 15px rgba(0,0,0,0.2);
+}
+#book-list {
+  list-style: none;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#book-list li {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+#book-list li:hover {
+  color: #3f83c2;
+}
+#book-list .book-item.active {
+  color: #3f83c2;
+}
+#book-isbn {
+  margin-bottom: 0.5rem;
+}
+.show-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.show {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  color: #0047ff;
+  font-family: 'Montserrat', sans-serif;
+}
+@media only screen and (max-width: 576px) {
+  .books-content {
+    display: none;
+  }
+  .books-content.active {
+    display: block;
+  }
+  .books-navigation.hide {
+    display: none;
+  }
+  .navbar-end {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 41px;
+    background-color: #000;
+  }
+  .navbar-end ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0px;
+  }
+  .back-button {
+    width: 100%;
+    display: flex;
+    padding: 1rem 0px;
+  }
+  #book-title {
+    text-align: center;
+  }
+  .maxHeight {
+    overflow: hidden;
+    max-height: 130px;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .back-button {
+    display: none;
+  }
+  .show-nav {
+    display: none;
+  }
+}
