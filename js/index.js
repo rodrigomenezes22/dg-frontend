@@ -4,7 +4,7 @@ let booksArray;
    Render the Navigation bar items
 */ 
 
-fetch("./../books.json")
+fetch("./js/books.json")
   .then((response) => response.json())
   .then((data) => {
     //Target the menu list
@@ -47,7 +47,7 @@ displayBook = (isbn) => {
   const booksNavigation = document.querySelector(".books-navigation");
   booksContent.classList.add("active");
   booksNavigation.classList.add("hide");
-  fetch("./../books.json")
+  fetch("./js/books.json")
     .then((response) => response.json())
     .then((data) => {
       let currentBook = data.books.filter((book) => book.isbn === isbn);
