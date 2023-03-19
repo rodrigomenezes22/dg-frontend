@@ -3,6 +3,9 @@
   margin: 0px;
   padding: 0px;
 }
+.color-red {
+  color: #f00;
+}
 header {
   background-color: #000;
   display: flex;
