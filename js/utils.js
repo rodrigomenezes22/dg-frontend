@@ -34,7 +34,7 @@ transformToRoman = (number) => {
 
 // ISBN Validator
 
-function isValidISBN(isbn) {
+isValidISBN = (isbn) => {
   if (/[^0-9]/.test(isbn)) return false;
 
   let checksum = 0;
@@ -51,10 +51,46 @@ function isValidISBN(isbn) {
 }
 
 // Format ISBN Numbers with hyphens.
-function formatISBN(number) {
+formatISBN = (number) => {
   const formattedNumber = `${number.slice(0, 3)}-${number.slice(
     3,
     4
   )}-${number.slice(4, 9)}-${number.slice(9, 12)}-${number.slice(12)}`;
   return formattedNumber;
 }
+
+
+// Books Function Navigation
+setActive = (e) => {
+  const bookItems = document.querySelectorAll(".book-item");
+  bookItems.forEach((item) => {
+    item.classList.remove("active");
+  });
+  e.target.classList.add("active");
+}
+
+handleBack = () => {
+  const booksContent = document.querySelector(".books-content");
+  const booksNavigation = document.querySelector(".books-navigation");
+  booksContent.classList.remove("active");
+  booksNavigation.classList.remove("hide");
+}
+
+
+
+handleMore = (e) => {
+
+  const booksList = document.getElementById("book-list");
+  booksList.classList.toggle("maxHeight");
+
+
+  if (e.target.innerHTML === "show more...") {
+    e.target.innerHTML = "show less...";
+  } else {
+    e.target.innerHTML = "show more...";
+  }
+
+}
+
+// Show and hide book items menu
+document.querySelector(".show").addEventListener("click", handleMore);
