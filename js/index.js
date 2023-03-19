@@ -53,7 +53,7 @@ displayBook = (isbn) => {
       let currentBook = data.books.filter((book) => book.isbn === isbn);
       bookTitle.innerHTML = currentBook[0].title;
       const validateIsbn = isValidISBN(isbn);
-      bookISBN.innerHTML = formatISBN(currentBook[0].isbn);
+      bookISBN.innerHTML = validateIsbn ? formatISBN(currentBook[0].isbn) : "<span class='color-red' role='alert'>Invalid ISBN!</span>";
       bookApendix.innerHTML = transformToRoman(currentBook[0].appendixPage);
       coverImage.src = validateIsbn ? `./images/images/${currentBook[0].isbn}.jpg` : `./images/images/default.jpg`;
     })
