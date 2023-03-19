@@ -10,6 +10,7 @@ header {
   background-color: #000;
   display: flex;
   justify-content: space-between;
+  height: 70px;
 }
 .navbar-logo {
   color: #fff;
