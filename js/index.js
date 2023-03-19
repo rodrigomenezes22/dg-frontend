@@ -56,6 +56,7 @@ displayBook = (isbn) => {
       bookISBN.innerHTML = validateIsbn ? formatISBN(currentBook[0].isbn) : "<span class='color-red' role='alert'>Invalid ISBN!</span>";
       bookApendix.innerHTML = transformToRoman(currentBook[0].appendixPage);
       coverImage.src = validateIsbn ? `./images/images/${currentBook[0].isbn}.jpg` : `./images/images/default.jpg`;
+      coverImage.alt = validateIsbn ? `${currentBook[0].title}` : "Invalid ISBN!";
     })
     .catch((error) => console.log(error));
 }
