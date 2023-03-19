@@ -55,7 +55,7 @@ displayBook = (isbn) => {
       const validateIsbn = isValidISBN(isbn);
       bookISBN.innerHTML = formatISBN(currentBook[0].isbn);
       bookApendix.innerHTML = transformToRoman(currentBook[0].appendixPage);
-      coverImage.src = validateIsbn ? `../images/images/${currentBook[0].isbn}.jpg` : `../images/images/default.jpg`;
+      coverImage.src = validateIsbn ? `./images/images/${currentBook[0].isbn}.jpg` : `./images/images/default.jpg`;
     })
     .catch((error) => console.log(error));
 }
