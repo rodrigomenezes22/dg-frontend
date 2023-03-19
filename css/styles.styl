@@ -10,6 +10,8 @@ secondary-color = #3F83C2
 
 terciary-color = #D8D8D8
 
+link-color = #0047FF
+
 header 
     background-color: primary-color
     display: flex
@@ -35,6 +37,7 @@ header
         display: flex
         list-style: none
         margin-bottom: 0px
+        padding-right: 1rem
         li 
             color: white
             font-size: .8rem
@@ -92,3 +95,57 @@ main
             
 #book-isbn
     margin-bottom: .5rem
+
+.show-nav
+    display: flex
+    justify-content: flex-end
+
+.show 
+    border: none
+    background: transparent
+    text-decoration: underline
+    color: link-color
+    font-family: 'Montserrat', sans-serif;
+
+
+@media only screen and (max-width: 576px)
+    .books-content 
+        display: none;
+    .books-content.active 
+        display: block;
+    
+    .books-navigation.hide
+        display: none;
+
+    
+    .navbar-end 
+        position: fixed;
+        bottom: 0px
+        left: 0px
+        width: 100%
+        height: 41px
+        background-color: primary-color
+        ul        
+            display: flex 
+            align-items: center
+            justify-content:center 
+            width: 100%
+            padding-left: 0px
+
+    .back-button
+        width: 100%
+        display: flex
+        padding: 1rem 0px
+
+    #book-title 
+        text-align: center
+
+    .maxHeight
+        overflow: hidden
+        max-height: 130px
+
+@media only screen and (min-width: 577px)
+    .back-button
+        display: none;
+    .show-nav 
+        display: none;
